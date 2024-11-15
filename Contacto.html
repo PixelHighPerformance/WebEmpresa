@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuración básica de la página: establece el idioma, la codificación y el diseño adaptable -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vincula el archivo CSS externo para el estilo de la página -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Vincula la librería Swiper para carruseles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- Icono de la pestaña del navegador -->
+    <link rel="icon" href="img/3.svg">
+    <!-- Carga los iconos de FontAwesome de manera diferida para mejorar el rendimiento -->
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Título de la página y descripción para SEO -->
+    <title>Contacto - Pixel High Performance</title>
+    <meta name="description" content="Póngase en contacto con Pixel High Performance para consultas y servicios de desarrollo tecnológico en Montevideo, Uruguay.">
+</head>
+<body>
+
+<header class="menu__wrapper">
+    <div class="menu__bar">
+        <!-- Logotipo que enlaza a la página de inicio -->
+        <a href="index.html" title="home" aria-label="Inicio">
+            <img src="img/3.svg" alt="Logo de Pixel High Performance" class="logo-image">
+        </a>
+        <!-- Menú de navegación principal -->
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="login-button">Inicio</a></li>
+                <li><a href="Historia.html" class="login-button">Acerca de</a></li>
+                <li><a href="Contacto.html" class="login-button">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="contact">
+        <!-- Encabezado principal de la sección de contacto -->
+        <h1>Contacto</h1>
+        <div class="contact-container">
+            <!-- Formulario de contacto que envía los datos a un correo específico mediante FormSubmit -->
+            <form action="https://formsubmit.co/pixelhighperformance@gmail.com" method="POST">
+                <!-- Campo para ingresar el nombre del usuario -->
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required aria-describedby="nameError" placeholder="Ej: Juan Pérez" autocomplete="off">
+                    <span class="error-message" id="nameError" aria-live="polite"></span>
+                </div>
+                <!-- Campo para ingresar el correo electrónico -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required aria-describedby="emailError" placeholder="Ej: correo@ejemplo.com" autocomplete="off">
+                    <span class="error-message" id="emailError" aria-live="polite"></span>
+                </div>
+                <!-- Campo de texto para el mensaje del usuario -->
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje"></textarea>
+                </div>
+                <!-- Botón de envío del formulario -->
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+            <!-- Información de contacto adicional, incluyendo dirección y mapa de ubicación -->
+            <div class="contact-info">
+                <h2>Nuestra Ubicación</h2>
+                <p>21 de Setiembre 3012 y R. Graseras, Montevideo, Uruguay</p>
+                <div class="map-container">
+                    <!-- Mapa de Google embebido, con ubicación específica de la empresa -->
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.45770839396!2d-56.15460412450832!3d-34.92005617427309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f817121885d6b%3A0xb7d35ae811eec2a2!2s21%20de%20Setiembre%203012%2C%2011300%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1731593495459!5m2!1ses!2suy" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Primera columna en el pie de página, con enlaces sobre la empresa -->
+            <div class="column">
+                <h3>Sobre Nosotros</h3>
+                <ul>
+                    <li><a href="Historia.html">Historia</a></li>
+                    <li><a href="Equipo.html">Equipo</a></li>
+                    <li><a href="Clientes.html">Clientes</a></li>
+                </ul>
+            </div>
+            <!-- Segunda columna con enlaces a los servicios ofrecidos -->
+            <div class="column">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="Consultoria.html">Consultoría</a></li>
+                    <li><a href="Desarrollo.html">Desarrollo</a></li>
+                    <li><a href="Soporte.html">Soporte</a></li>
+                </ul>
+            </div>
+            <!-- Tercera columna con un enlace a la página de contacto -->
+            <div class="column">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="Contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Iconos de redes sociales con enlaces a las páginas de Twitter e Instagram -->
+        <div class="social-media">
+            <a href="https://x.com/phpofi_?s=11" target="_blank" rel="noopener noreferrer"><img src="img/twitter-x-logo-black-round-20851.svg" alt="Twitter"></a>
+            <a href="https://www.instagram.com/pixelhighperformance?igsh=aWJsZGtoZjE3MDlz" target="_blank" rel="noopener noreferrer"><img src="img/black-instagram-logo-3497.svg" alt="Instagram"></a>
+        </div>
+        <!-- Parte inferior del pie de página, con enlaces a políticas y derechos de autor -->
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="Politica.html">Política de Privacidad</a></li>
+                <li><a href="Terminos.html">Términos de Servicio</a></li>
+            </ul>
+            <p>&copy; 2024 Pixel High Performance. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Archivo JavaScript externo para validación, cargado de forma diferida -->
+<script src="script/Validacion.js" defer></script>
+</body>
+</html>
