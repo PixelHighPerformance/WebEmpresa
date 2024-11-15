@@ -872,6 +872,29 @@ body {
 }
 
 
+/* Contenedor responsivo para el mapa */
+.map-container {
+  width: 100%;          /* Ocupa todo el ancho del contenedor padre */
+  max-width: 600px;     /* Ancho máximo para evitar estiramiento en pantallas grandes */
+  margin: 0 auto;       /* Centrado horizontal */
+  padding-top: 56.25%;  /* Relación de aspecto 16:9 (alto basado en el ancho) */
+  position: relative;   /* Necesario para el iframe absoluto */
+}
+
+/* Estilo del iframe */
+.map-container iframe {
+  position: absolute;   /* Alineación absoluta para llenar el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;          /* Ancho completo del contenedor */
+  height: 100%;         /* Altura completa del contenedor */
+  border: 0;            /* Elimina el borde */
+  border-radius: 10px;  /* Bordes redondeados */
+}
+
+
+
+
 /* Estilos para los párrafos dentro de la sección de información de contacto */
 .contact-info p {
     font-size: 1.1rem;                     /* Tamaño de fuente ligeramente mayor */
