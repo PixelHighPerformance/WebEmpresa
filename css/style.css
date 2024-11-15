@@ -368,20 +368,43 @@ footer {
   overflow: hidden;                          /* Asegura que no haya desbordamiento */
 }
 
-/* Estilos para la sección de contadores */
 .counters {
-  display: flex;                             /* Usa Flexbox para disposición horizontal */
-  justify-content: space-around;            /* Espacia los elementos uniformemente */
-  background-color: #f8f8f8;                /* Color de fondo */
-  padding: 40px 0;                          /* Espaciado interno (padding) vertical */
-  text-align: center;                        /* Centra el texto */
+  display: flex;                             
+  justify-content: space-around;            
+  background-color: #f8f8f8;                
+  padding: 40px 0;                          
+  text-align: center;                       
+  flex-wrap: wrap;                          /* Permite que los contadores se envuelvan en filas */
 }
 
 /* Estilos para cada contador */
 .counter {
-  flex: 1;                                   /* Cada contador ocupa el mismo espacio */
-  margin: 0 20px;                           /* Margen lateral */
+  flex: 1 1 200px;                           /* Flex-grow, Flex-shrink, Tamaño mínimo de 200px */
+  margin: 10px 20px;                         /* Margen alrededor de los contadores */
+  max-width: 300px;                          /* Máximo ancho para evitar estiramiento excesivo */
 }
+
+/* Estilos para el título dentro de los contadores */
+.counter h3 {
+  font-size: 24px;                          
+  margin-bottom: 10px;                      
+  color: #333;                              
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  .counters {
+    flex-direction: column;                 /* Los contadores se apilan en columna */
+    align-items: center;                    /* Alinea los contadores al centro */
+  }
+  
+  .counter {
+    flex: 1 1 100%;                         /* Ocupan todo el ancho disponible */
+    max-width: 100%;                        /* Sin límite de ancho */
+    margin: 10px 0;                         /* Margen vertical */
+  }
+}
+
 
 /* Estilos para el título dentro de los contadores */
 .counter h3 {
