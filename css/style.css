@@ -841,32 +841,36 @@ body {
     background-color: #0056b3;              /* Color de fondo más oscuro al pasar el mouse */
 }
 
+/* Contenedor padre para asegurar el ajuste responsivo */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;                         /* Permite que los elementos se ajusten en filas */
+    justify-content: center;                 /* Centra los elementos horizontalmente */
+    gap: 20px;                               /* Espacio entre los contenedores */
+    padding: 20px;                           /* Espaciado interno */
+}
+
 /* Estilos para el contenedor de información de contacto */
 .contact-info {
-  flex: 1 1 48%;                         /* Ancho base del 48% para pantallas grandes */
-  background-color: #f9fafb;             
-  border-radius: 10px;                   
-  padding: 20px;                         
-  text-align: center;                    
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
-  max-width: 500px;                      /* Máximo ancho para evitar que crezca demasiado en pantallas grandes */
-  margin: 10px auto;                     /* Centrado horizontal y margen vertical */
+    flex: 1 1 45%;                          /* Ancho base del 45% para pantallas grandes */
+    background-color: #f9fafb;              
+    border-radius: 10px;                   
+    padding: 20px;                         
+    text-align: center;                    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    max-width: 500px;                      
+    margin: 0 auto;                        
 }
 
 /* Ajustes para pantallas pequeñas */
-@media (max-width: 600px) {
-  .contact-info {
-      flex: 1 1 100%;                    /* Ocupa el 100% del ancho disponible */
-      max-width: 100%;                   /* Elimina el límite de ancho */
-      padding: 15px;                     /* Reduce el padding para mejor ajuste en móviles */
-  }
+@media (max-width: 768px) {
+    .contact-info {
+        flex: 1 1 100%;                    /* Ocupa el 100% del ancho disponible */
+        max-width: 100%;                   /* Elimina el límite de ancho */
+        padding: 15px;                     
+    }
 }
 
-/* Estilos para el título dentro de la sección de información de contacto */
-.contact-info h3 {
-    color: #333;                            /* Color del texto (gris oscuro) */
-    margin-bottom: 10px;                   /* Margen inferior de 10px */
-}
 
 /* Estilos para los párrafos dentro de la sección de información de contacto */
 .contact-info p {
