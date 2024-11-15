@@ -843,12 +843,23 @@ body {
 
 /* Estilos para el contenedor de información de contacto */
 .contact-info {
-    flex: 1 1 48%;                         /* Permite que el contenedor crezca y se reduzca, con un ancho base del 48% */
-    background-color: #f9fafb;              /* Fondo gris claro */
-    border-radius: 10px;                    /* Bordes redondeados de 10px */
-    padding: 20px;                          /* Espaciado interno (padding) de 20px */
-    text-align: center;                     /* Centra el texto dentro del contenedor */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra sutil alrededor del contenedor */
+  flex: 1 1 48%;                         /* Ancho base del 48% para pantallas grandes */
+  background-color: #f9fafb;             
+  border-radius: 10px;                   
+  padding: 20px;                         
+  text-align: center;                    
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+  max-width: 500px;                      /* Máximo ancho para evitar que crezca demasiado en pantallas grandes */
+  margin: 10px auto;                     /* Centrado horizontal y margen vertical */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  .contact-info {
+      flex: 1 1 100%;                    /* Ocupa el 100% del ancho disponible */
+      max-width: 100%;                   /* Elimina el límite de ancho */
+      padding: 15px;                     /* Reduce el padding para mejor ajuste en móviles */
+  }
 }
 
 /* Estilos para el título dentro de la sección de información de contacto */
